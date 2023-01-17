@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #03080a;
+}
+.container{
+    width: 80%;
+    padding: 20px;
+}
+.container h2{
+    width: 100%;
+    color: #45f3ff;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.container .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+.container .row100 .inputbox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #45f3ff;
+}
+.container .row100 .inputbox input,
+.container .row100 .inputbox.textarea textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    columns: #000;
+}
+.container .row100 .inputbox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .row100 .inputbox input:focus + .text,
+.container .row100 .inputbox input:valid + .text{
+    top: -35px;
+    left: -10px; 
+}
+.container .row100 .inputbox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background:#45f3ff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+
+}
+.container .row100 .inputbox input:focus ~ .line,
+.container .row100 .inputbox input:valid ~ .line{
+    height: 100%;
+}
+/*------------- Text Area CSS ------------- 
+.container .row100 .inputbox .textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.container .row100 .inputbox .textarea textarea{
+    height: 100%;
+    resize: none;
+}
+.container .row100 .inputbox textarea:focus + .text,
+.container .row100 .inputbox textarea:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+.container .row100 .inputbox textarea:focus ~ .line,
+.container .row100 .inputbox textarea:valid ~ .line{
+    height: 100%;
+}
+*/
+
+/*-------- button CSS -----------*/ 
+
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:#fff;
+    border: 1px solid #fff;
+    padding: 12px 34px ;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+}
+.hero-btn:hover{
+    border: 1px solid #4b9ba1;
+    background: #3e999f;
+    transition: 1s;
+}
